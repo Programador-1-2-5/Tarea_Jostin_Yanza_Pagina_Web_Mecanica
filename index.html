@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taller Automotriz Express</title>
+    <!-- Bootstrap 5.3 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-light d-flex flex-column min-vh-100">
+
+    <!-- BARRA DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark shadow-sm">
+        <div class="container">
+            <a class="navbar-brand fw-bold d-flex align-items-center gap-2" href="#" id="brandHome">
+                <img src="img/logo.jpg" alt="Logo" width="40" height="40" class="rounded-circle object-fit-cover">
+                Taller Automotriz Express
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto ms-3" id="navMenuLinks">
+                    <li class="nav-item"><a class="nav-link active" href="#" data-target="viewServices">Catálogo de Servicios</a></li>
+                    <li class="nav-item"><a class="nav-link d-none" href="#" data-target="viewSolicitud" id="linkSolicitud">Formulario de Cita</a></li>
+                    <li class="nav-item"><a class="nav-link d-none" href="#" data-target="viewAccount" id="linkAccount">Mi Cuenta</a></li>
+                    <li class="nav-item"><a class="nav-link d-none" href="#" data-target="viewAdmin" id="linkAdmin">Panel Admin</a></li>
+                </ul>
+                <div id="navAuthSection">
+                    <button class="btn btn-outline-light btn-sm px-3" id="navBtnLogin">Iniciar Sesión</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="container my-5 flex-fill">
+
+        <!-- 1. VISTA CATÁLOGO DE SERVICIOS -->
+        <section id="viewServices" class="mb-5">
+            <div class="text-center mb-5">
+                <img src="img/logo.jpg" alt="Logo Taller" width="90" height="90" class="rounded-circle mb-3 shadow object-fit-cover">
+                <h1 class="display-6 fw-bold text-dark">Nuestros Servicios y Mantenimiento</h1>
+                <p class="text-muted">Elige el servicio técnico que necesita tu vehículo para agendar tu cita de inmediato.</p>
+            </div>
+            
+            <div class="row g-4">
+                <!-- Servicio 1 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="img/aceite.png" alt="Cambio de Aceite" class="card-img-top" style="height: 160px; object-fit: cover;" onerror="this.src='img/logo.jpg'">
+                        <div class="card-body d-flex flex-column p-3">
+                            <span class="badge bg-success mb-2 align-self-start px-3 py-1 rounded-pill">Revisión gratuita</span>
+                            <h5 class="card-title fw-bold text-dark">Cambio de Aceite</h5>
+                            <p class="card-text text-muted small">Aceite sintético, cambio de filtro y chequeo preventivo.</p>
+                            <div class="mt-auto pt-3 border-top">
+                                <p class="mb-2"><strong>Precio:</strong> <span class="text-success fs-5 fw-bold">$35.00</span></p>
+                                <button class="btn btn-primary w-100 btn-solicitar-servicio" data-servicio="Cambio de Aceite ($35)">Agendar servicio</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 2 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="img/abc.png" alt="Afinamiento ABC" class="card-img-top" style="height: 160px; object-fit: cover;" onerror="this.src='img/logo.jpg'">
+                        <div class="card-body d-flex flex-column p-3">
+                            <span class="badge bg-primary mb-2 align-self-start px-3 py-1 rounded-pill">Más solicitado</span>
+                            <h5 class="card-title fw-bold text-dark">Afinamiento (ABC)</h5>
+                            <p class="card-text text-muted small">Limpieza de inyectores, bujías y cuerpo de aceleración.</p>
+                            <div class="mt-auto pt-3 border-top">
+                                <p class="mb-2"><strong>Precio:</strong> <span class="text-success fs-5 fw-bold">$65.00</span></p>
+                                <button class="btn btn-primary w-100 btn-solicitar-servicio" data-servicio="Afinamiento ABC ($65)">Agendar servicio</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 3 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="img/frenos.png" alt="Frenos" class="card-img-top" style="height: 160px; object-fit: cover;" onerror="this.src='img/logo.jpg'">
+                        <div class="card-body d-flex flex-column p-3">
+                            <span class="badge bg-warning text-dark mb-2 align-self-start px-3 py-1 rounded-pill">Seguridad Vial</span>
+                            <h5 class="card-title fw-bold text-dark">Frenos y Suspensión</h5>
+                            <p class="card-text text-muted small">Inspección general, rectificación de discos y purgado.</p>
+                            <div class="mt-auto pt-3 border-top">
+                                <p class="mb-2"><strong>Precio:</strong> <span class="text-success fs-5 fw-bold">$45.00</span></p>
+                                <button class="btn btn-primary w-100 btn-solicitar-servicio" data-servicio="Frenos y Suspensión ($45)">Agendar servicio</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 4 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="img/cambiofrenos.png" alt="Cambio de Frenos" class="card-img-top" style="height: 160px; object-fit: cover;" onerror="this.src='img/logo.jpg'">
+                        <div class="card-body d-flex flex-column p-3">
+                            <span class="badge bg-danger mb-2 align-self-start px-3 py-1 rounded-pill">Mantenimiento Vital</span>
+                            <h5 class="card-title fw-bold text-dark">Cambio de Pastillas</h5>
+                            <p class="card-text text-muted small">Reemplazo completo de pastillas de freno cerámicas.</p>
+                            <div class="mt-auto pt-3 border-top">
+                                <p class="mb-2"><strong>Precio:</strong> <span class="text-success fs-5 fw-bold">$50.00</span></p>
+                                <button class="btn btn-primary w-100 btn-solicitar-servicio" data-servicio="Cambio de Pastillas ($50)">Agendar servicio</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 5 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="img/electrico.png" alt="Sistema Eléctrico" class="card-img-top" style="height: 160px; object-fit: cover;" onerror="this.src='img/logo.jpg'">
+                        <div class="card-body d-flex flex-column p-3">
+                            <span class="badge bg-info text-dark mb-2 align-self-start px-3 py-1 rounded-pill">Escaneo Digital</span>
+                            <h5 class="card-title fw-bold text-dark">Sistema Eléctrico</h5>
+                            <p class="card-text text-muted small">Escaneo computarizado de fallas y revisión de batería.</p>
+                            <div class="mt-auto pt-3 border-top">
+                                <p class="mb-2"><strong>Precio:</strong> <span class="text-success fs-5 fw-bold">$25.00</span></p>
+                                <button class="btn btn-primary w-100 btn-solicitar-servicio" data-servicio="Sistema Eléctrico ($25)">Agendar servicio</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 6 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="img/alineacion.png" alt="Alineación" class="card-img-top" style="height: 160px; object-fit: cover;" onerror="this.src='img/logo.jpg'">
+                        <div class="card-body d-flex flex-column p-3">
+                            <span class="badge bg-secondary mb-2 align-self-start px-3 py-1 rounded-pill">Geometría 3D</span>
+                            <h5 class="card-title fw-bold text-dark">Alineación y Balanceo</h5>
+                            <p class="card-text text-muted small">Alineación 3D computarizada y rotación de llantas.</p>
+                            <div class="mt-auto pt-3 border-top">
+                                <p class="mb-2"><strong>Precio:</strong> <span class="text-success fs-5 fw-bold">$30.00</span></p>
+                                <button class="btn btn-primary w-100 btn-solicitar-servicio" data-servicio="Alineación y Balanceo ($30)">Agendar servicio</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 7 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="img/pintura.png" alt="Pintura Express" class="card-img-top" style="height: 160px; object-fit: cover;" onerror="this.src='img/logo.jpg'">
+                        <div class="card-body d-flex flex-column p-3">
+                            <span class="badge bg-dark mb-2 align-self-start px-3 py-1 rounded-pill">Estética Automotriz</span>
+                            <h5 class="card-title fw-bold text-dark">Enderezada y Pintura</h5>
+                            <p class="card-text text-muted small">Reparación de rayones y pintura automotriz al horno.</p>
+                            <div class="mt-auto pt-3 border-top">
+                                <p class="mb-2"><strong>Precio base:</strong> <span class="text-success fs-5 fw-bold">$85.00</span></p>
+                                <button class="btn btn-primary w-100 btn-solicitar-servicio" data-servicio="Enderezada y Pintura ($85)">Agendar servicio</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Servicio 8 -->
+                <div class="col-lg-3 col-md-6">
+                    <div class="card h-100 shadow-sm border-0 rounded-4 overflow-hidden">
+                        <img src="img/transmision.png" alt="Transmisión" class="card-img-top" style="height: 160px; object-fit: cover;" onerror="this.src='img/logo.jpg'">
+                        <div class="card-body d-flex flex-column p-3">
+                            <span class="badge bg-danger mb-2 align-self-start px-3 py-1 rounded-pill">Mecánica Mayor</span>
+                            <h5 class="card-title fw-bold text-dark">Embrague / Caja</h5>
+                            <p class="card-text text-muted small">Diagnóstico de caja de cambios y kit de embrague.</p>
+                            <div class="mt-auto pt-3 border-top">
+                                <p class="mb-2"><strong>Precio base:</strong> <span class="text-success fs-5 fw-bold">$120.00</span></p>
+                                <button class="btn btn-primary w-100 btn-solicitar-servicio" data-servicio="Embrague y Transmisión ($120)">Agendar servicio</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 2. VISTA FORMULARIO DE CITA -->
+        <section id="viewSolicitud" class="d-none">
+            <div class="card card-solicitud border-0 p-4 p-md-5 bg-white mx-auto" style="max-width: 850px;">
+                
+                <div class="row align-items-center mb-2">
+                    <div class="col-3">
+                        <button class="btn btn-outline-secondary btn-sm px-3 rounded-pill" id="btnVolverCatologo">
+                            ← Catálogo
+                        </button>
+                    </div>
+                    <div class="col-6 text-center">
+                        <h3 class="mb-0 text-dark fw-bold fs-4">Agendar Cita</h3>
+                    </div>
+                    <div class="col-3"></div>
+                </div>
+                <p class="text-muted text-center mb-4 small">Complete los datos de su vehículo para reservar su atención prioritaria en taller.</p>
+                
+                <form id="formMantenimiento">
+                    <div class="row g-3">
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Nombre del Propietario</label>
+                            <input type="text" class="form-control form-control-lg fs-6" id="cliNombre" placeholder="Solo letras y espacios" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Correo electrónico</label>
+                            <input type="email" class="form-control form-control-lg fs-6" id="cliEmail" placeholder="ejemplo@correo.com" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Teléfono (10 dígitos)</label>
+                            <input type="text" class="form-control form-control-lg fs-6" id="cliTelefono" placeholder="Ej: 0987654321" maxlength="10" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Placa del Vehículo</label>
+                            <input type="text" class="form-control form-control-lg fs-6" id="autoPlaca" placeholder="Ej: ABC-1234" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Marca y Modelo</label>
+                            <input type="text" class="form-control form-control-lg fs-6" id="autoModelo" placeholder="Ej: Chevrolet Aveo" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Año del Vehículo</label>
+                            <input type="number" class="form-control form-control-lg fs-6" id="autoAnio" placeholder="Ej: 2020" min="1990" max="2026" required>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Servicio Principal Seleccionado</label>
+                            <select class="form-select form-select-lg fs-6" id="tipoServicio" required>
+                                <option value="">Seleccione servicio...</option>
+                                <option value="Cambio de Aceite ($35)">Cambio de Aceite y Filtros ($35.00)</option>
+                                <option value="Afinamiento ABC ($65)">Afinamiento Completo ABC ($65.00)</option>
+                                <option value="Frenos y Suspensión ($45)">Frenos y Suspensión ($45.00)</option>
+                                <option value="Cambio de Pastillas ($50)">Cambio de Pastillas de Freno ($50.00)</option>
+                                <option value="Sistema Eléctrico ($25)">Sistema Eléctrico y Batería ($25.00)</option>
+                                <option value="Alineación y Balanceo ($30)">Alineación y Balanceo ($30.00)</option>
+                                <option value="Enderezada y Pintura ($85)">Enderezada y Pintura Express ($85.00)</option>
+                                <option value="Embrague y Transmisión ($120)">Embrague y Transmisión ($120.00)</option>
+                            </select>
+                        </div>
+                        <div class="col-md-6">
+                            <label class="form-label fw-semibold">Fecha y Hora de la Cita</label>
+                            <input type="datetime-local" class="form-control form-control-lg fs-6" id="fechaServicio" required>
+                        </div>
+                        
+                        <!-- Servicios Adicionales -->
+                        <div class="col-12 mt-4">
+                            <label class="form-label d-block fw-bold text-dark mb-2">🛠️ Añade Servicios Adicionales a tu Cita (Opcional):</label>
+                            <div class="row g-2">
+                                <div class="col-md-4">
+                                    <div class="addon-box">
+                                        <div class="form-check m-0">
+                                            <input class="form-check-input check-adicional" type="checkbox" value="Cambio de Aceite" id="chkAceite">
+                                            <label class="addon-label" for="chkAceite">🛢️ Cambio de Aceite ($35)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="addon-box">
+                                        <div class="form-check m-0">
+                                            <input class="form-check-input check-adicional" type="checkbox" value="Afinamiento ABC" id="chkAbc">
+                                            <label class="addon-label" for="chkAbc">🔧 Afinamiento ABC ($65)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="addon-box">
+                                        <div class="form-check m-0">
+                                            <input class="form-check-input check-adicional" type="checkbox" value="Frenos y Suspensión" id="chkFrenos">
+                                            <label class="addon-label" for="chkFrenos">🛑 Frenos / Susp. ($45)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="addon-box">
+                                        <div class="form-check m-0">
+                                            <input class="form-check-input check-adicional" type="checkbox" value="Cambio de Pastillas" id="chkPastillas">
+                                            <label class="addon-label" for="chkPastillas">🛞 Cambio Pastillas ($50)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="addon-box">
+                                        <div class="form-check m-0">
+                                            <input class="form-check-input check-adicional" type="checkbox" value="Sistema Eléctrico" id="chkElectrico">
+                                            <label class="addon-label" for="chkElectrico">🔋 Sis. Eléctrico ($25)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="addon-box">
+                                        <div class="form-check m-0">
+                                            <input class="form-check-input check-adicional" type="checkbox" value="Alineación y Balanceo" id="chkAlineacion">
+                                            <label class="addon-label" for="chkAlineacion">📐 Alineación 3D ($30)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="addon-box">
+                                        <div class="form-check m-0">
+                                            <input class="form-check-input check-adicional" type="checkbox" value="Enderezada y Pintura" id="chkPintura">
+                                            <label class="addon-label" for="chkPintura">🖌️ Pintura al Horno ($85)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="addon-box">
+                                        <div class="form-check m-0">
+                                            <input class="form-check-input check-adicional" type="checkbox" value="Embrague y Transmisión" id="chkTransmision">
+                                            <label class="addon-label" for="chkTransmision">⚙️ Caja y Embrague ($120)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="addon-box">
+                                        <div class="form-check m-0">
+                                            <input class="form-check-input check-adicional" type="checkbox" value="Lavado general de carrocería" id="chkLavado">
+                                            <label class="addon-label" for="chkLavado">💧 Lavado Carrocería (+$10)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="addon-box">
+                                        <div class="form-check m-0">
+                                            <input class="form-check-input check-adicional" type="checkbox" value="Polichado de faros" id="chkPolichado">
+                                            <label class="addon-label" for="chkPolichado">✨ Pulido de Faros (+$15)</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Botón principal -->
+                        <div class="col-12 text-center mt-5">
+                            <button type="submit" class="btn btn-cta-submit btn-lg px-5 py-3 fw-bold rounded-pill w-100 w-md-auto">
+                                Confirmar y Agendar Cita
+                            </button>
+                            <div class="mt-2">
+                                <button type="reset" class="btn btn-link text-muted btn-sm">Limpiar Formulario</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        <!-- 3. VISTA MI CUENTA -->
+        <section id="viewAccount" class="d-none">
+            <div class="row justify-content-center">
+                <div class="col-md-8" id="loginCardContainer">
+                    <div class="card shadow-sm border-0 rounded-4 p-4 bg-white">
+                        <h3 class="text-center mb-4 fw-bold">Iniciar Sesión en el Sistema</h3>
+                        <form id="formLogin">
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Correo electrónico</label>
+                                <input type="email" class="form-control" id="loginEmail" placeholder="ejemplo@correo.com" required>
+                            </div>
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">Contraseña</label>
+                                <input type="password" class="form-control" id="loginPassword" placeholder="******" required>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100 py-2 fw-bold">Ingresar</button>
+                        </form>
+                        <div class="mt-3 alert alert-secondary small mb-0 rounded-3">
+                            <strong>Credenciales de prueba:</strong><br>
+                            • Admin: <code>admin@taller.com</code> / <code>123</code><br>
+                            • Cliente registrado: Ingrese con su correo y contraseña <code>123</code>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-12 d-none" id="profileDashboard">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h2>Mi Cuenta Personal</h2>
+                        <div></div> <!-- Espaciador simétrico -->
+                    </div>
+                    <!-- Tarjeta informativa con Lugar de Atención y sin rol redundante -->
+                    <div class="card p-4 shadow-sm border-0 rounded-4 mb-4 bg-white">
+                        <p class="mb-1"><strong>Sesión activa:</strong> <span id="perfilEmail"></span></p>
+                        <p class="mb-1 text-primary"><strong>📍 Lugar de atención (Dirección):</strong> Av. de la Prensa N45-12 y El Inca, Quito.</p>
+                        <p class="mb-0 text-muted">Bienvenido al portal de control vehicular del Taller Automotriz Express. Recuerde presentarse 5 minutos antes de su cita.</p>
+                    </div>
+                    
+                    <h4 class="mb-3 fw-bold">Mis Solicitudes Registradas</h4>
+                    <div class="table-responsive bg-white p-3 rounded-4 shadow-sm border">
+                        <table class="table table-striped align-middle mb-0">
+                            <thead class="table-dark">
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Placa</th>
+                                    <th>Vehículo</th>
+                                    <th>Servicio</th>
+                                    <th>Fecha</th>
+                                    <th>Estado</th>
+                                </tr>
+                            </thead>
+                            <tbody id="tablaMisSolicitudes"></tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 4. VISTA PANEL ADMINISTRADOR -->
+        <section id="viewAdmin" class="d-none">
+            <div class="d-flex justify-content-between align-items-center mb-4">
+                <h2>Panel de Administración General</h2>
+                <div></div>
+            </div>
+
+            <div class="table-responsive bg-white p-3 rounded-4 shadow-sm border">
+                <table class="table table-striped align-middle mb-0">
+                    <thead class="table-dark">
+                        <tr>
+                            <th>ID</th>
+                            <th>Cliente</th>
+                            <th>Correo / Tel</th>
+                            <th>Placa / Auto</th>
+                            <th>Servicio</th>
+                            <th>Estado</th>
+                            <th>Acciones (CRUD)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tablaAdminSolicitudes"></tbody>
+                </table>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-4 mt-auto border-top border-secondary">
+        <div class="container">
+            <div class="d-flex justify-content-center align-items-center gap-2 mb-2">
+                <img src="img/logo.jpg" alt="Logo Footer" width="30" height="30" class="rounded-circle object-fit-cover">
+                <span class="fw-bold">Taller Automotriz Express</span>
+            </div>
+            <p class="mb-0 text-white-50 small">&copy; 2026 Taller Automotriz Express. Todos los derechos reservados.</p>
+            <p class="mb-0 text-white-50 small">Instituto Superior Tecnológico Cordillera - Desarrollo de Software</p>
+        </div>
+    </footer>
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Tu archivo script.js -->
+    <script src="js/script.js"></script>
+</body>
+</html>

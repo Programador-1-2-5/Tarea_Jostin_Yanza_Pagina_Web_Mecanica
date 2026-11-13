@@ -1,0 +1,69 @@
+:root {
+    --taller-dark: #121619;
+    --taller-red: #d90429;
+    --taller-orange: #ff5400;
+    --taller-success: #2b9348;
+}
+
+body {
+    background-color: #f4f6f8;
+    font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+}
+
+/* Tarjeta del Formulario limpia y simétrica */
+.card-solicitud {
+    border: none;
+    box-shadow: 0 12px 35px rgba(0,0,0,0.08) !important;
+    border-radius: 16px !important;
+}
+
+/* Tarjetas interactivas de servicios adicionales compactas y de una sola línea */
+.addon-box {
+    border: 1.5px solid #dee2e6;
+    border-radius: 10px;
+    padding: 10px 12px;
+    transition: all 0.2s ease-in-out;
+    background-color: #ffffff;
+    cursor: pointer;
+    height: 100%;
+}
+
+.addon-box:hover {
+    border-color: var(--taller-orange);
+    background-color: #fff9f5;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 10px rgba(255, 84, 0, 0.1);
+}
+
+/* Forzar texto compacto para que nunca se baje de línea y no rompa la alineación */
+.addon-label {
+    font-size: 0.88rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: inline-block;
+    width: calc(100% - 25px);
+    vertical-align: middle;
+}
+
+.form-check-input:checked ~ .addon-label {
+    font-weight: 700;
+    color: var(--taller-orange);
+}
+
+/* Botón de acción principal de alta conversión */
+.btn-cta-submit {
+    background: linear-gradient(135deg, #0afaae 0%, #09f63c 100%);
+    border: none;
+    color: white;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 15px rgba(217, 4, 41, 0.35);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-cta-submit:hover {
+    transform: scale(1.01);
+    box-shadow: 0 6px 20px rgba(217, 4, 41, 0.5);
+    color: white;
+}
